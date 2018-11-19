@@ -1,0 +1,59 @@
+.usersbox {
+    padding-top: 30px;
+}
+
+.usersbox .li-user {
+    position: relative;
+    width: 450px;
+    height: 80px;
+    float: left;
+    background: #fff;
+    padding: 15px 20px;
+    margin: 0 20px 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .5);
+}
+
+.li-user:nth-child(2n) {
+    margin-right: 0;
+}
+
+.li-user span {
+    display: block;
+    color: #666;
+}
+
+.li-user span b {
+    color: #f60;
+}
+
+.li-user span.Uname {
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: bold;
+    color: #f60;
+}
+
+.li-user span.Uoperate {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    width: 100px;
+}
+
+.li-user span.Uoperate a {
+    text-align: center;
+    display: block;
+    margin: 10px 20px 0 0;
+    border: 1px solid #999;
+}
+
+li.add-user a {
+    display: block;
+    height: 100%;
+    padding: 0;
+    background: url("../../img/add.png") center center no-repeat;
+}
+
+li.add-user a:hover {
+    background: url("../../img/add-hover.png") center center no-repeat;
+}

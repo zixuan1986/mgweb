@@ -1,0 +1,19 @@
+<div class="mgweb-nav">
+    <ul class="nav-bar">
+        <li class="index"><a href="/"></a></li>
+        <li {{#compare nav '==' 'channel'}}class="active"{{/compare}}><a href="/users">用户管理</a></li>
+        <li {{#compare nav '==' 'channel'}}class="active"{{/compare}}><a href="/comp">组件管理</a></li>
+    </ul>
+    <div class="setbox">
+        <a class="btn" href="javascript:;">系统管理</a>
+        <ul class="set-ul Zarr none">
+            <li><a href="">修改密码</a></li>
+            <li><a href="javascript:;">退出登录</a></li>
+        </ul>
+    </div>
+</div>
+
+
+{{#extend 'css'}}
+    <link rel='stylesheet' href='/css/moudle/navs.css'/>
+{{/extend}}

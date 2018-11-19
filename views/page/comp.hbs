@@ -1,0 +1,144 @@
+<div class="wp compbox">
+
+    <h2>组件列表</h2>
+
+    <div class="comp-choice">
+        <span class="label">选择组</span>
+        <div id="compto" class="comp-dropdown bor3" tabindex="1">
+            <span>1111</span>
+            <ul class="dropdown">
+                <li><a href="#"><i class="icon-user"></i>Profile</a></li>
+                <li><a href="#"><i class="icon-cog"></i>Settings</a></li>
+                <li><a href="#"><i class="icon-remove"></i>Log out</a></li>
+            </ul>
+            ​
+        </div>
+        <a href="" class="add-comp bor3 Cbtn">添加组件</a>
+    </div>
+
+    <ul class="comp-item">
+        <li class="clearfix">
+            <div class="Cobox min">
+                <span class="Cdesc">
+                    css
+                </span>
+                <div class="Cvers">
+                    <a href="">版本号1.0.1</a>
+                    <a href="">版本号1.2.1</a>
+                    <a href="">版本号1.3.1</a>
+                    <a href="">版本号1.4.1</a>
+                </div>
+            </div>
+            <div class="Cobox">
+                <a href="" class="Cname">
+                    h5player-msite
+                </a>
+                <p>Slide-Banner 幻灯片BannerSlide-Banner 幻灯片BannerSlide-Banner 幻灯片BannerSlide-Banner 幻灯片BannerSlide-Banner 幻灯片BannerSlide-Banner 幻灯片Banner</p>
+                <p class="Ctime">最后更新：2018-11-12</p>
+            </div>
+
+        </li>
+        <li class="clearfix">
+            <div class="Cobox min">
+                <span class="Cdesc">
+                    html
+                </span>
+                <div class="Cvers">
+                    <a href="">版本号1.0.1</a>
+                    <a href="">版本号1.2.1</a>
+                    <a href="">版本号1.3.1</a>
+                    <a href="">版本号1.4.1</a>
+                </div>
+            </div>
+            <div class="Cobox">
+                <a href="" class="Cname">
+                    h5player-msite
+                </a>
+                <p>Slide-Banner 幻灯片BannerSlide-Banner 幻灯片BannerSlide-Banner 幻灯片BannerSlide-Banner 幻灯片BannerSlide-Banner 幻灯片BannerSlide-Banner 幻灯片Banner</p>
+                <p class="Ctime">最后更新：2018-12-12</p> </div>
+        </li>
+    </ul>
+
+
+    <h2>组件管理</h2>
+    <ul class="minul clearfix">
+        <li class="min-comp add-comp bor3">
+            <a href="javascript:;"></a>
+        </li>
+        <li class="min-comp bor3">
+            <h3><a href="">Slide-Banner</a></h3>
+            <a class="del Cbtn bor3" href="javascript:;">删除</a>
+            <a class="Cbtn bor3" href="javascript:;">编辑</a>
+        </li>
+        <li class="min-comp bor3">
+            <h3><a href="">Landscape</a></h3>
+            <a class="del Cbtn bor3" href="javascript:;">删除</a>
+            <a class="Cbtn bor3" href="javascript:;">编辑</a>
+        </li>
+        <li class="min-comp bor3">
+            <h3><a href="">Landscape</a></h3>
+            <a class="del Cbtn bor3" href="javascript:;">删除</a>
+            <a class="Cbtn bor3" href="javascript:;">编辑</a>
+        </li>
+        <li class="min-comp bor3">
+            <h3><a href="">Landscape</a></h3>
+            <a class="del Cbtn bor3" href="javascript:;">删除</a>
+            <a class="Cbtn bor3" href="javascript:;">编辑</a>
+        </li>
+        <li class="min-comp bor3">
+            <h3><a href="">Landscape</a></h3>
+            <a class="del Cbtn bor3" href="javascript:;">删除</a>
+            <a class="Cbtn bor3" href="javascript:;">编辑</a>
+        </li>
+    </ul>
+
+
+</div>
+
+<div class="addbox forcomp">
+    <form action="forcomp" method="post" enctype="multipart/form-data">
+        {{> add}}
+    </form>
+</div>
+
+
+{{#extend 'css'}}
+    <link rel='stylesheet' href='/css/moudle/comp.css'/>
+{{/extend}}
+
+{{#extend 'jquery'}}
+    <script type="text/javascript">
+        function DropDown(el) {
+            this.compto = el;
+            this.placeholder = this.compto.children('span');
+            this.opts = this.compto.find('ul.dropdown > li');
+            this.val = '';
+            this.initEvents();
+        }
+
+        DropDown.prototype = {
+            initEvents: function () {
+                let obj = this;
+                obj.compto.on('click',
+                        function () {
+                            $(this).toggleClass('active');
+                            return false;
+                        });
+                obj.opts.on('click',
+                        function () {
+                            let opt = $(this);
+                            obj.val = opt.text();
+                            obj.index = opt.index();
+                            obj.placeholder.text(obj.val);
+                        });
+            },
+        };
+
+        $(function () {
+            let compto = new DropDown($('#compto'));
+            $(document).click(function () {
+                $('.comp-dropdown').removeClass('active');
+            });
+        });
+    </script>
+{{/extend}}

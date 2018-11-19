@@ -1,0 +1,72 @@
+{{#if compadd}}
+    <h6>新增组件 <a href="javascript:;" class="close"></a></h6>
+
+    <div class="form-group">
+        <label for="place">所处组</label>
+        <input type="text" name="place" id="place">
+    </div>
+
+    <div class="form-group">
+        <label for="name">所处组</label>
+        <input type="text" name="name" id="name">
+    </div>
+
+    <div class="form-group">
+        <label for="developer">开发人员</label>
+        <input type="text" name="developer" id="developer">
+    </div>
+
+    <div class="form-group txtlong">
+        <label for="txt">描述</label>
+        <textarea type="text" name="txt" id="txt"></textarea>
+    </div>
+
+    <button type="submit" class="Zbtn btn-primary">保存</button>
+{{/if}}
+
+
+{{#if useradd}}
+    <legend>新增用户</legend>
+
+    <div class="form-group">
+        <label for="name">开发人员</label>
+        <input type="text" name="name" id="name">
+    </div>
+
+    <div class="form-group txtlong">
+        <label for="email">邮箱</label>
+        <input type="text" name="email" id="email">
+    </div>
+    <div class="form-group">
+        <select name="power" id="power" multiple="multiple">
+            <option value="1">管理员</option>
+            <option value="2">开发者</option>
+            <option value="3">访客</option>
+        </select>
+    </div>
+
+    <button type="submit" class="Zbtn btn-primary">提交</button>
+{{/if}}
+
+{{#if footadd}}
+    <legend>新增项目</legend>
+
+    <div class="form-group">
+        <label for="name">视频名称</label>
+        <input type="text" name="name" id="name">
+    </div>
+
+    <div class="form-group">
+        <label for="url">视频地址</label>
+        <input type="text" name="url" id="url">
+    </div>
+
+    <button type="submit" class="Zbtn btn-primary">提交</button>
+{{/if}}
+
+
+{{#extend 'jquery'}}
+    <script>
+
+    </script>
+{{/extend}}

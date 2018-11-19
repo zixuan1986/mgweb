@@ -1,10 +1,17 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <title>{{title}}</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    {{{body}}}
-  </body>
+    <link rel='stylesheet' href='/css/base.css'/>
+    {{{block 'css'}}}
+</head>
+<body>
+{{> navs}}
+
+{{{body}}}
+
+<script src="/js/jquery.js"></script>
+
+{{{block 'jquery'}}}
+</body>
 </html>

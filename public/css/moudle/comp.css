@@ -1,0 +1,239 @@
+
+.compbox h2 {
+    margin-top: 30px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 22px;
+    color: #555;
+    font-weight: bold;
+    padding-left: 18px;
+    background: url(//img.mgtv.com/imgotv-channel/5.8.8/indexicon/til-line-2.png) no-repeat 0 3px;
+    margin-bottom: 20px;
+}
+
+.compbox .minul li {
+    float: left;
+    margin: 0 20px 20px 0;
+}
+
+.compbox .minul li:nth-child(4n) {
+    margin-right: 0;
+}
+
+li.min-comp {
+    width: 235px;
+    height: 90px;
+    background: #fff;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, .5);
+}
+
+li.min-comp h3 {
+    line-height: 40px;
+    margin-bottom: 15px;
+}
+
+li.min-comp h3 a {
+    color: #f60;
+    font-weight: bold;
+}
+
+li.min-comp h3 a:hover {
+    text-decoration: underline;
+}
+
+li.min-comp a {
+    padding: 5px 10px;
+    color: #252525;
+}
+
+li.min-comp a.Cbtn {
+    border: 1px solid #aaa;
+}
+
+li.min-comp a.del {
+    margin-right: 20px;
+}
+
+li.add-comp a {
+    display: block;
+    height: 100%;
+    padding: 0;
+    background: url("../../img/add.png") center center no-repeat;
+}
+
+li.add-comp a:hover {
+    background: url("../../img/add-hover.png") center center no-repeat;
+}
+
+/*搜索框*/
+.comp-choice {
+    line-height: 36px;
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+.comp-choice .label {
+    display: block;
+    float: left;
+    padding-right: 10px;
+    font-size: 18px;
+    color: #444;
+}
+
+.comp-choice .add-comp {
+    float: left;
+    display: block;
+    border: 1px solid #999;
+    width: 80px;
+    text-align: center;
+}
+
+.comp-dropdown {
+    float: left;
+    position: relative;
+    width: 200px;
+    padding: 0 20px;
+    background: #fff;
+    cursor: pointer;
+    margin-right: 30px;
+    border: 1px solid #999;
+    outline: none;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+
+.comp-dropdown:after {
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    margin-top: -3px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: #252525 transparent transparent transparent;
+}
+
+.comp-dropdown .dropdown {
+    position: absolute;
+    width: 240px;
+    top: 100%;
+    left: -1px;
+    right: 0;
+    background: #fff;
+    border-radius: 0 0 3px 3px;
+    border: 1px solid #999;
+    border-top: none;
+    list-style: none;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.comp-dropdown .dropdown li {
+    padding: 0 10px;
+}
+
+.comp-dropdown .dropdown li a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    padding: 5px 0;
+    transition: all 0.3s ease-out;
+    border-bottom: 1px solid #e6e8ea;
+}
+
+.comp-dropdown .dropdown li:last-of-type a {
+    border: none;
+}
+
+.comp-dropdown .dropdown li i {
+    margin-right: 5px;
+    color: inherit;
+    vertical-align: middle;
+}
+
+.comp-dropdown .dropdown li:hover a {
+    background-color: #fffafa;
+    color: #f60;
+}
+
+.comp-dropdown.active {
+    border-radius: 3px 3px 0 0;
+    background-color: #252525;
+    color: #fff;
+    border: 1px solid #252525;
+}
+
+.comp-dropdown.active:after {
+    border-color: transparent transparent #fff transparent;
+    margin-top: -9px;
+}
+
+.comp-dropdown.active .dropdown {
+    max-height: 400px;
+}
+
+.compbox .comp-item {
+    width: 100%;
+}
+
+.comp-item li {
+    padding: 20px 0;
+    border-top: 1px solid #ccc;
+}
+
+.comp-item li .Cobox {
+    width: 60%;
+}
+
+.comp-item li .Cobox.min {
+    width: 30%;
+    float: right;
+}
+
+.Cobox.min .Cdesc {
+    position: absolute;
+}
+
+.Cobox.min .Cvers {
+    padding-left: 50px;
+}
+
+.Cvers a {
+    text-align: right;
+    display: block;
+    color: #666;
+}
+
+.Cvers a:hover {
+    color: #f60;
+    text-decoration: underline;
+}
+
+.Cobox .Cname {
+    display: block;
+    line-height: 30px;
+    font-size: 20px;
+    color: #f60;
+    padding-bottom: 10px;
+}
+
+.Cobox .Cname:hover {
+    text-decoration: underline;
+}
+
+.Cobox .Ctime {
+    font-size: 12px;
+    color: #888;
+}
